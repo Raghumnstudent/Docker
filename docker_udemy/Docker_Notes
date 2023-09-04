@@ -1,0 +1,19 @@
+
+
+
+
+container life:
+if no process running inside the container,docker will terminate the container.
+
+=====================================================================================================
+Busybox image:
+Busybox is multi-call binary, that combined  many common unix utilities inti small execultable,mean busybox single executable contain the many executable of unix utility.
+ 
+Busybox is not a fully-featured linux os.have a set of linux utilities.it don't have any os info (cat /etc/*release*)
+
+Almost all common commands of unix(linux is taken features of unix and built,so use busybox for basic linux operation) are available in the busybox image.it is very small in size compare other os images(ubuntu,redhat)
+
+=======================================================================================================
+Alpine image: it is based on the busybox image and musl libc().it is almost full feature of linux system.You can able to install the additional packages using apk
+
+Enter into container and do ls -la /bin -->all executables are pointing to busybox executable in bin path. 
