@@ -1,0 +1,16 @@
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.4 as zeomega-baseimage
+
+RUN mkdir -p /apps/raghu
+
+WORKDIR /apps/raghu
+
+RUN echo "jksdjfkj" >  raghu.txt
+
+#commands mentioned in RUN instruction will run inside of container and which is related to container only,
+#Ex: RUN cp raghu.txt ./  will search raghu.txt inside of container and copy to another location
+RUN cp ./raghu.txt ./ravi.txt
+
+RUN cat ./ravi.txt
+
+#instruction copy will copy file from host machine into inside of container
+COPY ./pyproject.toml ./
