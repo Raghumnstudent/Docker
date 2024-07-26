@@ -1,0 +1,40 @@
+
+docker -->
+docker is a tool,which is used to developing,shipping and running application.
+
+docker allow you run the application with independent of infrastructure.
+
+docker give facility run the your application in loosely isolates environment called container.
+
+docker components -->
+
+docker client: docker client is way to communicate to docker server and used to execute docker command and get the output from docker server.
+docker client is seperate binary in docker,we can stop the docker server and able to call docker client.
+
+docker server: is set of processes. that processes are docker daemon,containerd,runc.docker init,API.
+
+      In general linux world,deamon is long running process and always listening.
+      
+      docker daemon  --> long running process and always listening to docker client. when request from docker client trough the api,get that detailsfrom other process and provide the details.
+      
+      containerd --> it is responsible for managing containers(creation,deleting,exiting container),
+                     communicate to runc to get required resources into container.
+      
+      runc ---> communicate to kernel to get resource which are required for containers.
+      
+      API  --> Communicate between the docker client and server using API.
+      
+      docker init --> it is respoisibel to start the docker server(set of processes) when system power on.
+
+docker host  --> On which machine docker server and docker client is installed,is that system called docker host.
+
+docker image ---> is set of read only file system. which contains all libraries,dependencies and code to run the application.
+
+docker container --> is set of read write file system,it will run the application using command mentioned in entrypoint or cmd when docker create container. if no process running inside of container,docker will terminate container.
+
+docker repository --> repository is set of docker images with different versions, we can create multiple version of images by tagging
+
+docker registry --> the place where we will save the docker images is called docker registry. docker hug is one of docker registry.
+
+
+
